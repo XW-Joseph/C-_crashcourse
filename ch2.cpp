@@ -12,8 +12,10 @@ int main(){
 	taunt();
 	unsigned long max = 0;
 	unsigned long values[] = {10,20,30,50,40,0};
-	for(size_t i=0;i<5;i++){
-		if(values[i]>max)max=values[i];
+	//for(size_t i=0;i<5;i++){
+	for(unsigned long value:values){
+		//if(values[i]>max)max=values[i];
+		if(value>max)max=value;
 	}
 	printf("maxval is %lu\n",max);
 }
