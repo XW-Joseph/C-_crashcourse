@@ -12,6 +12,12 @@ struct Book{
 	int pages;
 	bool hardcover;
 };
+struct YearCnt{
+	void add_Yr(){
+		year++;
+	}
+	int year;
+};
 int main(){
 	int myArr[100];
 	int arr[] = {1,2,3,4};
@@ -34,7 +40,11 @@ int main(){
 		default:{printf("not teky or diny\n");}
 	}
 	Book testBook;
-
 	testBook.pages = 291;
 	printf("testBook has %d pages\n",testBook.pages);
+	YearCnt clock;
+	clock.year = 2020;
+	clock.add_Yr();clock.add_Yr();
+	printf("year ++ ++ = %d\n",clock.year);
+
 }
