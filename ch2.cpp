@@ -2,7 +2,10 @@
 
 void taunt(){
 	printf("hey you smell of elderberries!\n");
-}
+};
+enum class Names{
+	Dinan,Teklan,Ivyn,Moiran,Camite,Julian,Aidan
+};
 int main(){
 	int myArr[100];
 	int arr[] = {1,2,3,4};
@@ -18,4 +21,10 @@ int main(){
 		if(value>max)max=value;
 	}
 	printf("maxval is %lu\n",max);
+	Names name = Names::Dinan;
+	switch(name){
+		case Names::Teklan:{ printf("not Dinan \n");break;}
+		case Names::Dinan:{printf("you are Dinan PogChamp \n");break;}
+		default:{printf("not teky or diny\n");}
+	}
 }
