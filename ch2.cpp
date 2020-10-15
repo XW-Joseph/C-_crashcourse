@@ -6,6 +6,12 @@ void taunt(){
 enum class Names{
 	Dinan,Teklan,Ivyn,Moiran,Camite,Julian,Aidan
 };
+struct Book{
+	char name[256];
+	int year;
+	int pages;
+	bool hardcover;
+};
 int main(){
 	int myArr[100];
 	int arr[] = {1,2,3,4};
@@ -27,4 +33,8 @@ int main(){
 		case Names::Dinan:{printf("you are Dinan PogChamp \n");break;}
 		default:{printf("not teky or diny\n");}
 	}
+	Book testBook;
+
+	testBook.pages = 291;
+	printf("testBook has %d pages\n",testBook.pages);
 }
