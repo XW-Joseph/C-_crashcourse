@@ -27,16 +27,17 @@ class YearCnt{
 	};
 	void add_Yr(){
 		year++;
-	}
+	};
 	bool set_year(int newyr){
 		if(newyr<2020) return false;
 		year = newyr;
 		return true;
-	}
+	};
 	int get_year(){
 		return year;
-	}
-
+	};
+	//~YearCnt(){ //destructor
+	//};
 };
 struct PodStruct{
 	uint64_t a;
