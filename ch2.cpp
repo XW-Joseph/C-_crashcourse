@@ -21,6 +21,9 @@ class YearCnt{
 	private:
 	int year;
 	public:
+	YearCnt(){
+		year = 2020;
+	};
 	void add_Yr(){
 		year++;
 	}
@@ -59,7 +62,8 @@ int main(){
 	testBook.pages = 291;
 	printf("testBook has %d pages\n",testBook.pages);
 	YearCnt clock;
-	clock.set_year(2020);
+	printf("default yr %d\n", clock.get_year());
+	clock.set_year(2022);
 	clock.add_Yr();clock.add_Yr();
 	printf("year ++ ++ = %d\n",clock.get_year());
 	Variant v;
