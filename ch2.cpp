@@ -18,6 +18,9 @@ union Variant{
 	double floating_point;
 };
 class YearCnt{
+	private:
+	int year;
+	public:
 	void add_Yr(){
 		year++;
 	}
@@ -29,8 +32,7 @@ class YearCnt{
 	int get_year(){
 		return year;
 	}
-	private:
-	int year;
+
 };
 int main(){
 	int myArr[100];
