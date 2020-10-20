@@ -1,4 +1,5 @@
 #include <cstdio>
+#include <string>
 //comment from T2
 void taunt(){
 	printf("hey you smell of elderberries!\n");
@@ -37,7 +38,17 @@ class YearCnt{
 	}
 
 };
+struct PodStruct{
+	uint64_t a;
+	//std::wstring b;
+	char b[6];
+	bool c;
+};
 int main(){
+	PodStruct zeroInitPod{};
+	PodStruct zeroInitPod2 = {}; // "=0; explicitly disallowed, () also no
+	PodStruct someInitPod{42,"hello"};
+	PodStruct allInitPod{43,"h",true};
 	int myArr[100];
 	int arr[] = {1,2,3,4};
 	printf("ele3 is %d.\n",arr[2]);
