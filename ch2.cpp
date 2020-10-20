@@ -17,10 +17,19 @@ union Variant{
 	int integer;
 	double floating_point;
 };
-struct YearCnt{
+class YearCnt{
 	void add_Yr(){
 		year++;
 	}
+	bool set_year(int newyr){
+		if(newyr<2020) return false;
+		year = newyr;
+		return true;
+	}
+	int get_year(){
+		return year;
+	}
+	private:
 	int year;
 };
 int main(){
@@ -48,9 +57,9 @@ int main(){
 	testBook.pages = 291;
 	printf("testBook has %d pages\n",testBook.pages);
 	YearCnt clock;
-	clock.year = 2020;
+	clock.set_year(2020);
 	clock.add_Yr();clock.add_Yr();
-	printf("year ++ ++ = %d\n",clock.year);
+	printf("year ++ ++ = %d\n",clock.get_year());
 	Variant v;
 	v.integer = 42;
 	printf("var int %d\n",v.integer);
