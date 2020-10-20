@@ -12,6 +12,11 @@ struct Book{
 	int pages;
 	bool hardcover;
 };
+union Variant{
+	char string[10];
+	int integer;
+	double floating_point;
+};
 struct YearCnt{
 	void add_Yr(){
 		year++;
@@ -46,5 +51,10 @@ int main(){
 	clock.year = 2020;
 	clock.add_Yr();clock.add_Yr();
 	printf("year ++ ++ = %d\n",clock.year);
-
+	Variant v;
+	v.integer = 42;
+	printf("var int %d\n",v.integer);
+	v.floating_point = 2.7182818284;
+	printf("Eulers no e:	%f\n", v.floating_point);
+	printf("garbage int now:	%d\n ",v.integer);
 }
